@@ -1,0 +1,197 @@
+/* General Page Styles */
+.job-container {
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+}
+
+.job-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.job-nav h2 {
+  color: #2c3e50;
+}
+
+.job-nav button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.job-nav button:hover {
+  background-color: #005fa3;
+}
+
+/* Job Cards */
+.job-list {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.job-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.job-card h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.job-card p {
+  color: #666;
+  margin-bottom: 0.8rem;
+}
+
+.job-card a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.job-card a:hover {
+  text-decoration: underline;
+}
+
+/* Job Detail Page */
+.section {
+  background: #fff;
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.apply-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.apply-btn:hover {
+  background-color: #218838;
+}
+
+/* Portal Styles (Login & Apply) */
+.portal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.portal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.portal-content h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  color: black;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #0077cc;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin: 0;
+}
+
+/* Access Denied */
+.access-denied {
+  background-color: #ffe5e5;
+  border: 1px solid red;
+  padding: 1rem;
+  border-radius: 8px;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+.apply-btn {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: #005fa3;
+}

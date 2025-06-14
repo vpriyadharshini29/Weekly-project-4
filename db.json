@@ -1,0 +1,51 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Frontend Developer",
+      "company": "Tech Corp",
+      "description": "We are hiring a frontend dev with React skills."
+    },
+    {
+      "id": "2",
+      "title": "Backend Engineer",
+      "company": "Data Systems",
+      "description": "Looking for Node.js and MongoDB expertise."
+    }
+  ],
+  "courses": [
+    {
+      "id": "react-basics",
+      "title": "React Basics",
+      "description": "Learn the basics of React.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Intro to React",
+          "video": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
+        },
+        {
+          "id": "l2",
+          "title": "JSX and Components",
+          "video": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
+        }
+      ]
+    },
+    {
+      "id": "advanced-react",
+      "title": "Advanced React",
+      "description": "Dive deeper into hooks and context.",
+      "lessons": [
+        {
+          "id": "l3",
+          "title": "useEffect Deep Dive",
+          "video": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
+        }
+      ]
+    }
+  ],
+  "leads": [
+    { "id": "l1", "name": "Acme Corp", "email": "acme@example.com" },
+    { "id": "l2", "name": "Globex Inc", "email": "globex@example.com" }
+  ]
+}

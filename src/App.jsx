@@ -1,43 +1,48 @@
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "./App.css";
 
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+// Existing Apps
+import BlogPlatform from "./components/BlogPlatform/BlogPlatform";
+import ECommerceApp from "./components/ECommerce/EcommerceApp";
+import CRMApp from "./components/CRM/CRMApp";
+import Courses from "./components/LMS/Courses";
+import CourseDetail from "./components/LMS/CourseDetail";
+import Login from "./components/LMS/Login";
+import withRole from "./hoc/withRole";
 
+// ➕ Job Portal
+import JobPortal from "./components/JobPortal/JobPortalApp";
 
-import './App.css';
-import GroceryList from './assets/Components/Project1';
-import LoginToggle from './assets/Components/Project2';
-import AgeCard from './assets/Components/Project3';
-import CharacterCounter from './assets/Components/Project4';
-import FruitSelector from './assets/Components/Project5';
-
-function App() {
+export default function App() {
   return (
-    <Router>
-      <div className="app-container">
-        <nav className="navbar">
-          <h2>React Projects</h2>
-          <ul>
-            <li><Link to="/">Grocery List</Link></li>
-            <li><Link to="/login">Login Toggle</Link></li>
-            <li><Link to="/age">Age Increaser</Link></li>
-            <li><Link to="/counter">Character Counter</Link></li>
-            <li><Link to="/fruit">Fruit Selector</Link></li>
-          </ul>
-        </nav>
-
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<GroceryList />} />
-            <Route path="/login" element={<LoginToggle />} />
-            <Route path="/age" element={<AgeCard name="Priya" />} />
-            <Route path="/counter" element={<CharacterCounter />} />
-            <Route path="/fruit" element={<FruitSelector />} />
-          </Routes>
+    <>
+      <Router>
+        <div className="main-nav">
+          <h1>React Mega App</h1>
+          <nav>
+            <Link to="/blog">Blog</Link>
+            <Link to="/ecommerce">E-Commerce</Link>
+            <Link to="/courses">LMS</Link>
+            <Link to="/crm">CRM</Link>
+            <Link to="/jobs">Job Portal</Link>
+          </nav>
         </div>
-        
-      </div>
-    </Router>
-    
+
+        <Routes>
+          <Route path="/blog/*" element={<BlogPlatform />} />
+          <Route path="/ecommerce/*" element={<ECommerceApp />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/courses/:courseId" element={withRole("student")(CourseDetail)} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/crm/*" element={<CRMApp />} />
+
+          {/* ✅ Job Portal */}
+          <Route path="/jobs/*" element={<JobPortal />} />
+        </Routes>
+      </Router>
+
+      {/* React Portal root for modals */}
+      <div id="portal-root"></div>
+    </>
   );
 }
-
-export default App;
